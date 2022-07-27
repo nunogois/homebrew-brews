@@ -5,20 +5,20 @@
 class Snob < Formula
   desc ""
   homepage "https://github.com/nunogois/homebrew-brews"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.3/snob_0.0.3_Darwin_arm64.tar.gz"
-      sha256 "9a5100466c39d26b37ae0e86d26fc985583645b7422bae5d0bca44963e5ec3cf"
+    if Hardware::CPU.intel?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.4/snob_0.0.4_Darwin_x86_64.tar.gz"
+      sha256 "a35d272b741e5cf973eceb8551291fa6c6e763ae0df48f9a99c7dd560777d71f"
 
       def install
         bin.install "snob"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.3/snob_0.0.3_Darwin_x86_64.tar.gz"
-      sha256 "d347c662bd9e7dce8c3ab5b50c5d4cf2e7e3183120a008e41f324727a523b531"
+    if Hardware::CPU.arm?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.4/snob_0.0.4_Darwin_arm64.tar.gz"
+      sha256 "ac2687220f5cead883928b4424d73f87f2885f9cad4d1bfdac801237e6f81ab4"
 
       def install
         bin.install "snob"
@@ -27,17 +27,17 @@ class Snob < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.3/snob_0.0.3_Linux_arm64.tar.gz"
-      sha256 "8c8aa6c094f5409b560add735c537344eec82eea3529dc3da5000884d4e7be59"
+    if Hardware::CPU.intel?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.4/snob_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "88133169938c526b067f8a91ca7019e6eea967b104cc983fd5009964f12d759d"
 
       def install
         bin.install "snob"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.3/snob_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "485d241565b13ab49e2469281858812f07160e147b690edc458151ce76945788"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.4/snob_0.0.4_Linux_arm64.tar.gz"
+      sha256 "a7ab65e5ccc5f1d645dfc65a1632cf17396478d2d0ad883816857c3d13ed6a67"
 
       def install
         bin.install "snob"
