@@ -11,3 +11,4 @@ brew install nunogois/brews/<brew>
 ## Brews
 
  - [snob](https://github.com/nunogois/snob) - 🥃 Snob is a simple CLI that fetches movies and TV shows info, written in Go.
+ - [unleash](https://github.com/nunogois/unleash-cli) - CLI for interfacing with Unleash: https://www.getunleash.io/
