@@ -5,20 +5,20 @@
 class Snob < Formula
   desc ""
   homepage "https://github.com/nunogois/homebrew-brews"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.5/snob_0.0.5_Darwin_arm64.tar.gz"
-      sha256 "3dbb0aeff3e31c9bcff768284f75e12a596ab21b61a65efe745151dc340177d7"
+      url "https://github.com/nunogois/snob/releases/download/v0.0.6/snob_0.0.6_Darwin_arm64.tar.gz"
+      sha256 "8dbc1c6b3f2b1537e9f3b2104232ae13e9fbe84a4515a7d2ca845cab576f7d3c"
 
       def install
         bin.install "snob"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.5/snob_0.0.5_Darwin_x86_64.tar.gz"
-      sha256 "8016f3d4510f2720bfa94f70f773a440a86b1cd18e381999c55761bdb9099c1a"
+      url "https://github.com/nunogois/snob/releases/download/v0.0.6/snob_0.0.6_Darwin_x86_64.tar.gz"
+      sha256 "94da09027ca761341ee0a473c9a47b176c64ceba307e9f53d8b4f40d5c16570a"
 
       def install
         bin.install "snob"
@@ -27,17 +27,17 @@ class Snob < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.5/snob_0.0.5_Linux_x86_64.tar.gz"
-      sha256 "97af2405eb8b62706eb4291e8e997abeb803fae68c5529aa1969809f61e7a4fb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.6/snob_0.0.6_Linux_arm64.tar.gz"
+      sha256 "c5913f0bf2d0083e6db2d085370280219e6796e854bcc3c0c301a3415f50fff2"
 
       def install
         bin.install "snob"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nunogois/snob/releases/download/v0.0.5/snob_0.0.5_Linux_arm64.tar.gz"
-      sha256 "4c82b536e2146fe629fc798beffb9182917255a9d435a3c7a0f3d1877f95e6c3"
+    if Hardware::CPU.intel?
+      url "https://github.com/nunogois/snob/releases/download/v0.0.6/snob_0.0.6_Linux_x86_64.tar.gz"
+      sha256 "9abd52fbc669b3179de6454dcb1987835b4f75536c6c6b2a947dd3e83e6465b7"
 
       def install
         bin.install "snob"
