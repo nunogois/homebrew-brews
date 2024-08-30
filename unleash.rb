@@ -1,20 +1,20 @@
 class Unleash < Formula
   desc "CLI for interfacing with Unleash: https://www.getunleash.io/"
   homepage "https://github.com/nunogois/unleash-cli"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.6/unleash-macos-x64.tar.gz"
-      sha256 "f401e52333975725e1473aa9fd7a99137beced09907debdd945b73a8d7fe9fb2"
+      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.7/unleash-macos-x64.tar.gz"
+      sha256 "ee61159d98a24aa3695af624997ab16986983c8832ebf59ae547ec1b91d14102"
 
       def install
         bin.install "unleash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.6/unleash-macos-arm64.tar.gz"
-      sha256 "dee8cfb4f52d49387b62e3f00cc80311d7ed4f764768bfc4c1475504158fa3a1"
+      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.7/unleash-macos-arm64.tar.gz"
+      sha256 "5d933a0699f27f948855128b468e43105ab32bdcd2d5dee430404efa4fd729a2"
 
       def install
         bin.install "unleash"
@@ -24,16 +24,16 @@ class Unleash < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.6/unleash-linux-x64.tar.gz"
-      sha256 "14477e2bbbc46b03b38fe09086265eade712ea7e105f511ab95069fd23f00bf2"
+      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.7/unleash-linux-x64.tar.gz"
+      sha256 "ef828af26a33af98da4a77bd79cbc61e75d6a4001a2a03476b6da54724ce0981"
 
       def install
         bin.install "unleash"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.6/unleash-linux-arm64.tar.gz"
-      sha256 "3bd58e8141f42d8ee005d45a309b5dda7b245b8d3b91e049c186fdbf593eee38"
+      url "https://github.com/nunogois/unleash-cli/releases/download/v0.0.7/unleash-linux-arm64.tar.gz"
+      sha256 "b09320054f9d42d27372df83a391d9ed575cb73c02a84606b2229cb347732c41"
 
       def install
         bin.install "unleash"
